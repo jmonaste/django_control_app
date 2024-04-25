@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/style/test.css' %}">
+</head>
+<body>
+    <section class="product">
+
+        <div class="product__photo">
+            <div class="photo-container">
+                <div class="photo-main">
+
+                    <img src="https://www.kia.com/content/dam/kwcms/kme/global/en/assets/vehicles/cd-hb/discover/kia-ceed-gtl-my22-actionpanel-get-yours.jpg" alt="Kia Ceed">
+                </div>
+            </div>
+        </div>
+
+        <div class="product__info">
+            <div class="title">
+                <h1>Brand: Kia</h1>
+                <span>Model: Ceed</span>
+            </div>
+
+            <div class="price">
+                PIN <span>88-9347</span>
+            </div>
+
+            <div class="description">
+                <h2>Check-list</h2>
+                <div>✅ Carrocería</div>
+                <div>✅ Cristales</div>
+                <div>🆘 Llantas</div>
+                <div>🆘 Interior</div>
+            </div>
+
+            <button class="delete--btn">DELETE</button>
+            <button class="update--btn">UPDATE</button>
+            <button class="send2aproval--btn">SEND TO APROVAL STAGE</button>
+        </div>
+        
+    </section>
+</body>
+</html>

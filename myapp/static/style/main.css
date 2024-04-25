@@ -1,0 +1,159 @@
+
+/* Estilo general para cada elemento de tarea */
+.task-item {
+    margin-bottom: 10px;
+  }
+  
+  /* Encabezado de la tarea */
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Título de la tarea */
+  .task-title {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Icono de estado de la tarea */
+  .task-title i {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  
+  /* Estado de la tarea (Pendiente o Realizada) */
+  .task-status {
+    font-style: italic;
+    color: #999;
+  }
+  
+  /* Detalles de la tarea */
+  .task-details {
+    margin-top: 10px;
+  }
+  
+  /* Botones de acción */
+  .task-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  /* Botón eliminar tarea */
+  .btn-delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  
+  /* Botón marcar como completada */
+  .btn-done {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+
+  /* Botón marcar como completada */
+  .btn-detail {
+    background-color: #f3bf05;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  
+  /* Estilos para diferentes estados de la tarea */
+  .task-item.done .task-title i {
+    color: #4CAF50;
+  }
+  
+  .task-item.done .task-status {
+    color: green;
+  }
+  
+  /* Contenedor de tareas */
+.task-container {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    margin-top: 10px;
+  }
+
+
+
+
+
+
+
+
+
+  
+
+body{
+    margin-top:20px;
+    background:#eee;
+}
+
+.navbar{
+    background: #404040;
+    padding: 5px 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbar ul li {
+    list-style: none;
+
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: aquamarine;
+}
+
+.container {
+    max-width:  1200px;
+    margin: auto;
+    padding: 20px 10px;
+}
+
+.card{
+    background: whitesmoke;
+    color: black;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+.input{
+    background: wheat;
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+
+

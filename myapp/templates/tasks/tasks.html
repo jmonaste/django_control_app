@@ -1,0 +1,58 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+<h1>Tasks</h1>
+
+    {% for task in tasks %}
+
+        
+        <div class="task-item">
+            <div class="task-container">  <div class="task-header">
+                <h3 class="task-title">
+                    {% if task.done == False %}
+                    <i class="fas fa-circle"></i>
+                    {% else %}
+                    <i class="fas fa-check-circle"></i>
+                    {% endif %}
+        
+                    {% if task.important %}
+                    <strong>{{ task.title }}</strong>
+                    {% else %}
+                    {{ task.title }}
+                    {% endif %}
+        
+                </h3>
+                <div class="task-status">
+                    {% if task.done == False %}
+                    <span>Pendiente</span>
+                    {% else %}
+                    <span>Realizada</span>
+                    {% endif %}
+                </div>
+                </div>
+                <div class="task-details">
+                    <p>{{ task.description }}</p>
+                    <p>{{ task.user }}</p>
+                    <p>Proyecto: {{ task.project.name }}</p>
+                    <p>{{task.datecompleted}}</p>
+                </div>
+
+                <div class="task-actions">
+
+                    <a href="{% url 'task_detail' task.id %}">
+                        <button data-task-id="{{ task.id }}" class="btn btn-detail">Ver detalle</button>
+                    </a>
+
+                    <button data-task-id="{{ task.id }}" class="btn btn-delete">Eliminar</button>
+                    <button data-task-id="{{ task.id }}" class="btn btn-done">Marcar como completada</button>
+                </div>
+            </div> 
+            </div>
+
+
+    {% endfor %}
+
+
+
+{% endblock %}
