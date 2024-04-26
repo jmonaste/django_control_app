@@ -76,6 +76,17 @@ def tasks(request):
         'tasks': tasks
     })
 
+
+@login_required
+def task_search(request):
+    # filtramos las tareas por usuario, por pendiente y por id (patente)
+    query = request.GET.get('q')
+    tasks = Task.objects.filter(user=request.user, datecompleted__isnull=True, title__icontains=query)
+    return render(request, 'tasks/tasks.html', {
+        'tasks': tasks
+    })
+
+
 @login_required
 def tasks_completed(request):
     # filtramos las tareas por usuario
