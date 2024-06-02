@@ -1,0 +1,23 @@
+{% for task in tasks %}
+    <div class="card mb-2">
+        <div class="card-header">
+            Campaña: {{ task.project.name }}
+        </div>
+        <div class="card-body">
+            <div class="row">  
+                <div class="col">  
+                    {% if task.flag_rechazado %} 
+                        <a href="{% url 'task_delivery' task.id %}" class="card-link">
+                            <h5 class="card-title">⚠ {{ task.vin }}</h5>
+                        </a>
+                    {% else %} 
+                        <a href="{% url 'task_delivery' task.id %}" class="card-link">
+                            <h5 class="card-title">{{ task.vin }}</h5>
+                        </a>
+                    {% endif %}
+                    <p class="card-text mb-1 text-sm">Deadline: {{ task.deadline }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
